@@ -32,7 +32,11 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
-h1, h2 {
+h1 {
+  color: #6B4226;
+}
+
+h2 {
   color: #5a7d32;
 }
 

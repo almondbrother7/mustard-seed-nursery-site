@@ -2,12 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Mustard Seed Nursery</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body { font-family: Arial, sans-serif; padding: 1rem; max-width: 800px; margin: auto; }
-    h1 { color: #4CAF50; }
-    .section { margin-top: 2rem; }
+    #contact form {
+      max-width: 500px;
+      margin: 1em auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    #contact label {
+      font-weight: bold;
+    }
+    #contact input,
+    #contact textarea {
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #contact button {
+      padding: 0.75em;
+      background-color: #5a7d32;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #contact button:hover {
+      background-color: #466322;
+    }
+    #contact p.contact-info {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
   </style>
 </head>
 <body>
@@ -40,7 +70,7 @@
     </ul>
   </div>
 
-    <div class="section">
+  <div class="section">
     <h2>Butterfly Garden</h2>
     <ul>
       <li>Blue Porter Weed</li>
@@ -52,26 +82,28 @@
     </ul>
   </div>
 
-  <div class="section">
+  <div class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>Reach us at: <strong>mustardseednursery@gmail.com</strong></p>
-      <form
-        action="https://formspree.io/f/xvgrdobw"
-        method="POST"
-      >
-      <label>
-        Your email:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
-      <input type="hidden" name="_redirect" value="https://almondbrother7/mustard-seed-nursery-site/thank-you.html" />
+    <p class="contact-info">Reach us at: <strong><a href="mailto:mustardseednursery@gmail.com">mustardseednursery@gmail.com</a></strong></p>
+    
+    <form action="https://formspree.io/f/xvgrdobw" method="POST">
+      <input type="hidden" name="_redirect" value="https://yourusername.github.io/mustard-seed-nursery-site/thank-you.html" />
 
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">Send</button>
     </form>
   </div>
+
+  <footer>
+    <p>&copy; 2025 The Mustard Seed Nursery</p>
+  </footer>
 </body>
 </html>

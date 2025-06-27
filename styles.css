@@ -1,12 +1,13 @@
-/* styles.css */
-
 body {
   font-family: Georgia, serif;
   line-height: 1.6;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   background-color: #f5f2eb;
   color: #4b3f2f;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
@@ -14,6 +15,10 @@ header {
   color: white;
   padding: 1em;
   text-align: center;
+}
+
+header h1 {
+  color: #6B4226;
 }
 
 nav a {
@@ -32,39 +37,50 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
-header h1 {
-  color: #6B4226;
+.section {
+  margin-top: 2rem;
 }
 
 h2 {
   color: #5a7d32;
 }
 
-form {
+#contact form {
   max-width: 500px;
-  margin: auto;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
+  gap: 1em;
 }
 
-input, textarea {
-  margin-bottom: 1em;
-  padding: 0.75em;
+#contact label {
+  font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.5em;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-button {
+#contact button {
+  padding: 0.75em;
   background-color: #5a7d32;
   color: white;
-  padding: 0.75em;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
+#contact button:hover {
   background-color: #466322;
+}
+
+#contact p.contact-info {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
 footer {
